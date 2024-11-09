@@ -111,7 +111,7 @@
         <button class="btn-yes" onclick="window.location.href='https://sutaprovip.github.io/phusite/';">Có</button>
         <button class="btn-no" onclick="moveButton()">Không</button>
     </div>
-
+    <audio id="myAudio" src="dungtuchoi.mp3"></audio>
     <script>
         // Hàm di chuyển nút "Không" đến vị trí ngẫu nhiên
         function moveButton() {
@@ -119,6 +119,8 @@
             button.style.position = 'absolute';
             button.style.left = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth)) + 'px';
             button.style.top = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight)) + 'px';
+            const audio = document.getElementById('myAudio');
+            audio.play();
         }
         // Hàm tạo hiệu ứng trái tim khi nhấp vào màn hình
         document.addEventListener('click', function (e) {
